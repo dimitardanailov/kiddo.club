@@ -5,8 +5,8 @@
             <corners android:radius="8dp" />
 
             <gradient
-                android:endColor="#000000"
-                android:startColor="#000000" />
+                android:endColor="#ccc"
+                android:startColor="#ccc" />
 
             <stroke
                 android:width="1dp"
@@ -19,8 +19,8 @@
                 <corners android:radius="8dp" />
 
                 <gradient
-                    android:endColor="#FF0000"
-                    android:startColor="#00FF00" />
+                    android:endColor="#991414"
+                    android:startColor="#A0A015" />
             </shape>
         </clip>
     </item>
