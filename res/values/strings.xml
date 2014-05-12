@@ -6,5 +6,12 @@
     <string name="action_settings">Settings</string>
     
     <string name="start_recording">Start recording</string>
+    
+    <string name="doctor">Doctor</string>
+    <string name="video_camera">Doctor</string>
+    <string name="kinder_kitchen">Kinder kitchen></string>
+    <string name="cry_detector">Cry Detector</string>
+    <string name="nannies">Nannies</string>
+    <string name="forum">Forum</string>
 
 </resources>

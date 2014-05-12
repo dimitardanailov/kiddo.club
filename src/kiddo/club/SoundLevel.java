@@ -12,32 +12,47 @@ import java.nio.ByteOrder;
 import android.support.v7.app.ActionBarActivity;
 import android.text.format.Time;
 import android.util.Log;
+import android.app.Activity;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class SoundLevel extends ActionBarActivity implements OnClickListener {
+public class SoundLevel extends DefaultActivity implements OnClickListener {
 
 	// Debug
 	private static String TAG = SoundLevel.class.getName();
 	
 	// Decibels
 	public static final int SAMPLE_RATE = 16000;
-	
+
+    // The AudioRecord class manages the audio resources for Java applications
+    // to record audio from the audio input hardware of the platform.
 	private AudioRecord mRecorder;
-	private File mRecording;
+
+    // An "abstract" representation of a file system entity identified by a pathname.
+    // The pathname may be absolute (relative to the root directory of the file system) or
+    // relative to the current directory in which the program is running.
+    private File mRecording;
+
+    // Arrays
 	private short[] mBuffer;
-	private final String startRecordingLabel = "Start recording";
+
+    // Labels strings
+    private final String startRecordingLabel = "Start recording";
 	private final String stopRecordingLabel = "Stop recording";
-	private boolean mIsRecording = false;
+
+    // Booleans
+    private boolean mIsRecording = false;
 	
 	// Layout elements
 	private ProgressBar mProgressBar;
@@ -48,6 +63,9 @@ public class SoundLevel extends ActionBarActivity implements OnClickListener {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_kiddo_sound_level);
 
@@ -275,5 +293,12 @@ public class SoundLevel extends ActionBarActivity implements OnClickListener {
 		for (int i = 0; i < value.length(); i++) {
 			output.write(value.charAt(i));
 		}
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		loadHomePageMainMenu(this);
+		
+		return true;
 	}
 }

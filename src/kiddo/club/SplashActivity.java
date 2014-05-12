@@ -1,16 +1,9 @@
 package kiddo.club;
 
-import kiddo.club.KiddoMainActivity.PlaceholderFragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
-
 /**
  * Create this Class from tutorial : 
  * http://www.itcuties.com/android/how-to-create-android-splash-screen/
@@ -26,6 +19,8 @@ public class SplashActivity extends DefaultActivity {
 	{
 		super.onCreate(savedInstanceState);
         
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
 		setContentView(R.layout.fragment_kiddo_splash_screen);
 		
 		// Start timer and launch in activity

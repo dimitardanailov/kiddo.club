@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kiddo.club.KiddoMainActivity$PlaceholderFragment" >
+    android:background="@drawable/kiddo_cry_detector">
     
     <ImageButton 
         android:id="@+id/recordingButton"
@@ -10,8 +10,9 @@
         android:background="@android:color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/start_recording"/>
+        android:contentDescription="@string/start_recording"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
     
     <ProgressBar 
         android:id="@+id/progressBar"

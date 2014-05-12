@@ -2,6 +2,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kiddo.club.KiddoMainActivity$PlaceholderFragment" >
+    android:background="@drawable/main_background">
 
+    <RelativeLayout 
+        android:id="@+id/header_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/kiddo_logo">
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/header_logo">
+        
+        <LinearLayout 
+        android:id="@+id/menu_buttons_first_row"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        
+        <ImageButton 
+            android:src="@drawable/doctor_icon"
+            android:background="@android:color/transparent"
+            android:id="@+id/button_doctor"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/doctor"
+            style="@style/leftButtonCenter"/>
+        
+        <ImageButton 
+            android:src="@drawable/video_camera_icon"
+            android:background="@android:color/transparent"
+            android:id="@+id/button_video_camera"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/video_camera"
+            style="@style/rightButtonCenter"/>
+    </LinearLayout>
+    
+    
+    <RelativeLayout 
+        android:id="@+id/menu_buttons_second_row"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/menu_buttons_first_row">
+        
+        <ImageView 
+            android:src="@drawable/center_image"
+            android:id="@+id/menu_center_image"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"/>
+        
+        <ImageButton 
+            android:src="@drawable/kinder_kitchen_icon"
+            android:background="@android:color/transparent"
+            android:id="@+id/button_kinder_kitchen"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/menu_center_image"
+            android:contentDescription="@string/kinder_kitchen"/>
+        
+        <ImageButton 
+            android:src="@drawable/cry_detector_icon"
+            android:background="@android:color/transparent"
+            android:id="@+id/button_cry_detector"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/menu_center_image"
+            android:contentDescription="@string/cry_detector"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/menu_buttons_third_row"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/menu_buttons_second_row">
+        
+        <ImageButton 
+            android:src="@drawable/nannies_icon"
+            android:background="@android:color/transparent"
+            android:id="@+id/button_nannies"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/nannies"
+            style="@style/leftButtonCenter"/>
+        
+        <ImageButton 
+            android:src="@drawable/forum_icon"
+            android:background="@android:color/transparent"
+            android:id="@+id/button_forum"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/forum"
+            style="@style/rightButtonCenter"/>
+        
+    </LinearLayout>
+        
+    </RelativeLayout>
 </RelativeLayout>
